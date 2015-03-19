@@ -1,0 +1,56 @@
+@import "news_special/defaults";
+@import "app";
+
+.promo{
+	display: block;
+	padding: 16px 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	overflow: hidden;
+	text-decoration: none;
+
+	.promo--logo{
+		float: left;
+		width: 80px;
+		height: 45px;
+		background: url(img/promo-image.png);
+		@include image-2x("img/promo-image@2x.png", 80px, 45px);
+	}
+
+	.promo--desc{
+		margin-left: 96px;
+
+		.promo--header{
+			font: bold 16px Helvetica; 
+			line-height: 18px;
+			color: #000;
+			margin: 0;
+
+			.promo--header__arrow{
+				display: inline-block;
+				width: 10px;
+				height: 14px;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOCAMAAAAhfX2ZAAAAM1BMVEUAAADNAADOAADNAADNAADNAADNAADNAADNAADNAADNAADNAADNAADNAADNAADIAADMAAAe2J+aAAAAEHRSTlMADyI0P05jgZKjr73P5O77ebqRUgAAAEZJREFUeAFFjWsOgDAIxvZw7gHT3v+0RgPIr6ZNPlJNcYwfUQ9VoLvvIBEUzgg3chgrttQ2u72QJ6xs6vpUGrCKf4udWZwer44CVvrHdBwAAAAASUVORK5CYII=);
+				vertical-align: middle;
+			}
+		}
+		.promo--text{
+			margin-top: 8px;
+			font: 14px Helvetica;
+			line-height: 16px; 
+			color: #3e3e3e;
+		}
+
+		@include respondMinMax(600px, false) {
+			.promo--header{
+				font-size: 18px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	&:hover .promo--desc .promo--header{
+		color: #0d63aa;
+	}
+}
